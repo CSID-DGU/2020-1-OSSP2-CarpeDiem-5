@@ -1,3 +1,5 @@
+#### OSSP project
+
 NOTE: This project is currently on hold because I want to explore other
 areas of programming. I may or may not come back to this specific project,
 but I will definitely be coming back to game development in the future. As
