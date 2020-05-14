@@ -1,4 +1,6 @@
-#### OSSP project
+
+# 2020-1-OSSP2-CarpeDiem-5
+OSSP project group
 
 NOTE: This project is currently on hold because I want to explore other
 areas of programming. I may or may not come back to this specific project,
@@ -139,3 +141,4 @@ Thanks to the following people for contributing to this project:
 Sergey Matyunin (https://github.com/serge-m)
 
 Yuriy Rivniy (https://github.com/YR17)
+=======
