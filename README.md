@@ -52,10 +52,6 @@ Libraries
 버전 주의!
 SDL2 library
 
-
-Building
-=================
-
 Dependancies: lSDL2, lSDL2_image, lSDL2_ttf, and lSDL2_mixer.
 
 
@@ -103,8 +99,9 @@ Yuriy Rivniy (https://github.com/YR17)
 Developers
 =================
 
-2018112088 김규리
-2018112042 송승민
-2018112011 최수정
+- 2018112088 김규리
+- 2018112042 송승민
+- 2018112011 최수정
+
 =======
 
