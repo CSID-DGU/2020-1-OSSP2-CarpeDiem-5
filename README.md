@@ -103,8 +103,10 @@ Yuriy Rivniy (https://github.com/YR17)
 Developers
 =================
 
+<<<<<<< HEAD
 2018112088 김규리
 2018112042 송승민
 2018112011 최수정
+>>>>>>> 0e29a9602fb44fa4fee13c59d6b8491f1b00fe5c
 =======
 
