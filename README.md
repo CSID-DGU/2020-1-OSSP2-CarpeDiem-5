@@ -32,43 +32,6 @@ in:
 Assets are courtesy of Kenney, who can be found here: http://kenney.nl/
 
 
-Language
-=================
-
-<<<<<<< HEAD
-C++
-
-
-Libraries
-=================
-
-버전 주의!
-SDL2 library
-=======
-This application is written in C++ using the SDL2 library. C++ was the
-language of choice because it is the de facto standard in the gaming
-industry. The game engine is rolled by hand, because this project was
-originally done as a learning exercise on software architeture and to learn
-about game engines. This is also the reason why an off the shelf game
-engine like Unity was not used.
-
-
-Motivation
-=================
-
-As previously mentioned, this project was originally done as a learning
-exercise. However, these goals have evolved into creating a complete open
-source game that is polished enough to ship. This means, that the
-envisioned final product will be cross platform and will feature:
-
-- smooth menu transitions
-- customizable levels/enemies (currently through XML, but will eventually
-want to have an embedded lua scripting environment for enemy behaviour)
-- co-operative mode
-- more as seen fit
->>>>>>> 86151eb092d6a4be7e20fe8d5c3a5b4a601b047f
-
-
 Screetshots
 =================
 
@@ -77,13 +40,26 @@ Screetshots
 ![Game](http://i.imgur.com/1WmAAGh.png)
 
 
+Language
+=================
+
+C++
+
+
+Libraries
+=================
+
+버전 주의!
+SDL2 library
+
+
 Building
 =================
 
 Dependancies: lSDL2, lSDL2_image, lSDL2_ttf, and lSDL2_mixer.
 
 
-Linux (Debian)
+Linux (Debian) -리눅스에서 설치 방법 
 =================
 
 [1] Run the following commands on bash:
@@ -111,37 +87,6 @@ Linux (Debian)
 
 - ./SpaceShooter
 
-
-Windows
-=================
-
-[1] Download the following Windows mingw development libraries and extract
-them all to a common directory:
-
-- SDL2
-- SDL2_image
-- SDL2_ttf
-- SDL2_mixer
-
-[2] Clone the repository: https://github.com/brandonto/sdl-space-shooter
-
-[3] Set up a Code::Blocks project
-
-[4] Move the contents of the cloned repository into the project folder
-
-[5] In "Project Build Options>Search Directories>Compiler" add:
-
-C:\PATH-TO-EXTRACTED-DIRECTORY\include\SDL2
-
-[6] In "Project Build Options>Search Directories>Linker" add:
-
-C:\PATH-TO-EXTRACTED-DIRECTORY\lib
-
-[7] In "Project Build Options>Linker Settings>Other Linker Options" add:
-
--lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer
-
-[8] Build and run
 
 
 Contributors
