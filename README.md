@@ -35,6 +35,7 @@ Assets are courtesy of Kenney, who can be found here: http://kenney.nl/
 Language
 =================
 
+<<<<<<< HEAD
 C++
 
 
@@ -42,6 +43,29 @@ Libraries
 =================
 버전 주의!
 SDL2 library
+=======
+This application is written in C++ using the SDL2 library. C++ was the
+language of choice because it is the de facto standard in the gaming
+industry. The game engine is rolled by hand, because this project was
+originally done as a learning exercise on software architeture and to learn
+about game engines. This is also the reason why an off the shelf game
+engine like Unity was not used.
+
+
+Motivation
+=================
+
+As previously mentioned, this project was originally done as a learning
+exercise. However, these goals have evolved into creating a complete open
+source game that is polished enough to ship. This means, that the
+envisioned final product will be cross platform and will feature:
+
+- smooth menu transitions
+- customizable levels/enemies (currently through XML, but will eventually
+want to have an embedded lua scripting environment for enemy behaviour)
+- co-operative mode
+- more as seen fit
+>>>>>>> 86151eb092d6a4be7e20fe8d5c3a5b4a601b047f
 
 
 Screetshots
