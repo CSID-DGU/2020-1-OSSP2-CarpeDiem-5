@@ -40,7 +40,7 @@ C++
 
 Libraries
 =================
-
+버전 주의!
 SDL2 library
 
 
