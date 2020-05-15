@@ -59,7 +59,7 @@ Building
 Dependancies: lSDL2, lSDL2_image, lSDL2_ttf, and lSDL2_mixer.
 
 
-Linux (Debian) -리눅스에서 설치 방법 
+Linux (Debian)
 =================
 
 [1] Run the following commands on bash:
@@ -98,3 +98,13 @@ Sergey Matyunin (https://github.com/serge-m)
 
 Yuriy Rivniy (https://github.com/YR17)
 =======
+
+
+Developers
+=================
+
+김규리
+송승민
+최수정
+=======
+
