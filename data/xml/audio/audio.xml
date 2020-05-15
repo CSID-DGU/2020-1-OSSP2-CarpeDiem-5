@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+
+<Audio>
+    <Music>
+        <music id="menu" file="../data/audio/music/menu.ogg" />
+        <music id="level1" file="../data/audio/music/level1.ogg" />
+        <music id="victory" file="../data/audio/music/win.ogg" />
+        <music id="gameOver" file="../data/audio/music/lose.ogg" />
+        <music id="boss" file="../data/audio/music/boss.ogg" />
+    </Music>
+
+    <Sound>
+        <sound id="explosion" file="../data/audio/sound/explosion.ogg" volume="96" />
+        <sound id="laser" file="../data/audio/sound/laser.ogg" />
+        <sound id="laserHit" file="../data/audio/sound/laserHit.ogg" />
+        <sound id="powerUp" file="../data/audio/sound/powerUp.ogg" />
+    </Sound>
+</Audio>
+
