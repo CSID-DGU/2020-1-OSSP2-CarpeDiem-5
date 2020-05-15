@@ -97,7 +97,7 @@ Thanks to the following people for contributing to this project:
 Sergey Matyunin (https://github.com/serge-m)
 
 Yuriy Rivniy (https://github.com/YR17)
-=======
+
 
 
 Developers
