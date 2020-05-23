@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+
+<Level>
+    <settings time="75000" music="level1"/>
+
+    <EnemyType>
+        <entity type="enemyProjectile" x="500" y="-50" spawn-time="9000"/>
+        <entity type="enemyProjectile" x="100" y="-50" spawn-time="10000"/>
+        <entity type="enemyProjectile" x="900" y="-50" spawn-time="11000"/>
+        <entity type="enemyProjectile" x="450" y="-50" spawn-time="12000"/>
+        <entity type="enemyProjectile" x="200" y="-50" spawn-time="13000"/>
+        <entity type="enemyProjectile" x="600" y="-50" spawn-time="14000"/>
+        <entity type="enemyProjectile" x="850" y="-50" spawn-time="15000"/>
+        <entity type="enemyProjectile" x="400" y="-50" spawn-time="16000"/>
+        <entity type="enemyProjectile" x="550" y="-50" spawn-time="17000"/>
+        <entity type="enemyProjectile" x="650" y="-50" spawn-time="18000"/>
+
+        <entity type="enemyProjectile" x="500" y="-50" spawn-time="23000"/>
+        <entity type="enemyProjectile" x="100" y="-50" spawn-time="24000"/>
+        <entity type="enemyProjectile" x="300" y="-50" spawn-time="24500"/>
+	    <entity type="enemyProjectile" x="500" y="-50" spawn-time="25000"/>
+        <entity type="enemyProjectile" x="700" y="-50" spawn-time="25500"/>
+        <entity type="enemyProjectile" x="100" y="-50" spawn-time="26000"/>
+        <entity type="enemyProjectile" x="300" y="-50" spawn-time="26500"/>
+        <entity type="enemyProjectile" x="900" y="-50" spawn-time="27000"/>
+        
+        <entity type="enemyProjectile" x="250" y="-50" spawn-time="30500"/>
+        <entity type="enemyProjectile" x="850" y="-50" spawn-time="31000"/>
+        <entity type="enemyProjectile" x="100" y="-50" spawn-time="31500"/>
+        <entity type="enemyProjectile" x="400" y="-50" spawn-time="32000"/>
+        <entity type="enemyProjectile" x="150" y="-50" spawn-time="32500"/>
+        <entity type="enemyProjectile" x="550" y="-50" spawn-time="33000"/>
+        <entity type="enemyProjectile" x="800" y="-50" spawn-time="33500"/>
+        <entity type="enemyProjectile" x="650" y="-50" spawn-time="34000"/>
+
+        <entity type="enemyProjectile" x="700" y="-50" spawn-time="37500"/>
+        <entity type="enemyProjectile" x="100" y="-50" spawn-time="38000"/>
+        <entity type="enemyProjectile" x="300" y="-50" spawn-time="38500"/>
+        <entity type="enemyProjectile" x="900" y="-50" spawn-time="39000"/>
+        <entity type="enemyProjectile" x="750" y="-50" spawn-time="39500"/>
+        <entity type="enemyProjectile" x="450" y="-50" spawn-time="40000"/>
+        <entity type="enemyProjectile" x="350" y="-50" spawn-time="40500"/>
+        
+        <entity type="enemyProjectile" x="250" y="-50" spawn-time="42500"/>
+        <entity type="enemyProjectile" x="850" y="-50" spawn-time="43000"/>
+        <entity type="enemyProjectile" x="100" y="-50" spawn-time="43500"/>
+        <entity type="enemyProjectile" x="400" y="-50" spawn-time="44000"/>
+        <entity type="enemyProjectile" x="150" y="-50" spawn-time="44500"/>
+        <entity type="enemyProjectile" x="550" y="-50" spawn-time="45000"/>
+        <entity type="enemyProjectile" x="800" y="-50" spawn-time="45500"/>
+        <entity type="enemyProjectile" x="650" y="-50" spawn-time="46000"/>
+
+        <entity type="enemyProjectile" x="100" y="-50" spawn-time="55000"/>
+        <entity type="enemyProjectile" x="200" y="-50" spawn-time="51000"/>
+        <entity type="enemyProjectile" x="356" y="-50" spawn-time="55000"/>
+        <entity type="enemyProjectile" x="512" y="-50" spawn-time="51000"/>
+        <entity type="enemyProjectile" x="668" y="-50" spawn-time="55000"/>
+        <entity type="enemyProjectile" x="824" y="-50" spawn-time="51000"/>
+        
+        
+        <entity type="enemyProjectile" x="224" y="-50" spawn-time="58000"/>
+        <entity type="enemyProjectile" x="924" y="-50" spawn-time="59000"/>
+        <entity type="enemyProjectile" x="124" y="-50" spawn-time="59000"/>
+        <entity type="enemyProjectile" x="100" y="-50" spawn-time="60000"/>
+        <entity type="enemyProjectile" x="356" y="-50" spawn-time="60000"/>
+        <entity type="enemyProjectile" x="668" y="-50" spawn-time="60000"/>
+        <entity type="enemyProjectile" x="924" y="-50" spawn-time="60000"/>
+    </EnemyType>
+</Level>
+
+
