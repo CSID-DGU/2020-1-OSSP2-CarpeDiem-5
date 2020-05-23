@@ -1,0 +1,9 @@
+<State>
+<Background> </Background>
+<Effect> </Effect>
+<Physical> </Physical>
+<Ui>
+<entity type="uiPanel" name="container" x="327" y="344" width="370" height="80" id="uiContainer" alphaEnabled="true"/>
+<entity type="level2_screen" name="level2_screen" data="level 2 !" x="350" y="354" width="332" height="60" id="level2_screen" alphaEnabled="true"/>
+</Ui>
+</State>
