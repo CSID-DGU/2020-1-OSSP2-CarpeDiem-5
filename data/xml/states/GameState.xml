@@ -26,7 +26,7 @@
         <entity type="enemyBoss" name="enemyBoss" width="300" height="180" texture="../data/graphics/sprites/enemyBoss1.png" id="enemyBoss"/>
         <entity type="enemyUFO" name="enemyUFO" width="50" height="50" texture="../data/graphics/sprites/ufoRed.png" id="enemyUFO"/>
 
-        <entity type="playerProjectile" name="playerProjectile" width="8" height="35" texture="../data/graphics/sprites/laserBlue03.png" id="playerProjectile"/>
+        <entity type="playerProjectile" name="playerProjectile" width="10" height="30" texture="../data/graphics/sprites/water.png" id="playerProjectile"/>
         <entity type="enemyProjectile" name="enemyProjectile" width="8" height="35" texture="../data/graphics/sprites/laserRed03.png" id="enemyProjectile"/>
         
         <entity type="lifeitem" name="lifeitem" width="30" height="35" texture="../data/graphics/sprites/life.png" id="enemyProjectile"/>
