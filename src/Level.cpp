@@ -20,7 +20,10 @@ Level::Level()
     nextSpawnTime()
 {
     levelXmlPaths[0] = Util::fix_path("../data/xml/levels/level1.xml");
-    levelXmlPaths[1] = Util::fix_path("../data/xml/levels/boss.xml");
+    levelXmlPaths[1] = Util::fix_path("../data/xml/levels/level2.xml");
+    levelXmlPaths[2] = Util::fix_path("../data/xml/levels/level3.xml");
+    levelXmlPaths[3] = Util::fix_path("../data/xml/levels/level4.xml");
+    levelXmlPaths[4] = Util::fix_path("../data/xml/levels/boss.xml");
     //levelXmlPaths[0] = Util::fix_path("../data/xml/levels/boss.xml");
 }
 
@@ -99,6 +102,7 @@ void Level::parse(int level)
 
 void Level::onUpdate()
 {
+    std::string xmlPath;
     if (doneLevel)
     {
         if (currentLevel < LEVEL_XML_PATH_SIZE)
@@ -106,6 +110,9 @@ void Level::onUpdate()
             timer.stop();
             doneLevel = false;
             parse(currentLevel++);
+            //levelup page insert
+            //if(currentLevel==2){
+            //xmlPath = Util::fix_path("../data/xml/states/level_1.xml");}
             notify(NULL, LEVEL_COMPLETED);
             timer.start();
         }
