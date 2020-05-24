@@ -30,7 +30,7 @@ PlayerPhysicsComponent::PlayerPhysicsComponent(GameEntity* gameEntity,
     this->windowElements = windowElements;
     render = gameEntity->getRenderComponent();
     invulnerableTimer.start();
-    health = 4;
+    health = 1;
     maxHealth = 4;
 }
 
