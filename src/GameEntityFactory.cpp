@@ -343,7 +343,7 @@ GameEntity* GameEntityFactory::createEntity(EntityXmlStruct xmlStruct)
             damagedTexture2->setTexture(Util::fix_path("../data/graphics/sprites/playerShip1_damage2.png"));
             render->addDamagedSprite(2, damagedTexture2);
             Texture* damagedTexture3 = new Texture(windowElements);
-            damagedTexture3->setTexture(Util::fix_path("../data/graphics/sprites/playerShip1_damage3.png"));
+            damagedTexture3->setTexture(Util::fix_path(""));
             render->addDamagedSprite(1, damagedTexture3);
             entity->addRenderComponent(render);
             PlayerPhysicsComponent* physics = new PlayerPhysicsComponent(entity, windowElements, this);
