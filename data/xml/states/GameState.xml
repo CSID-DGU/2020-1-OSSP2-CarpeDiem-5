@@ -28,10 +28,12 @@
 
         <entity type="playerProjectile" name="playerProjectile" width="8" height="35" texture="../data/graphics/sprites/laserBlue03.png" id="playerProjectile"/>
         <entity type="enemyProjectile" name="enemyProjectile" width="8" height="35" texture="../data/graphics/sprites/laserRed03.png" id="enemyProjectile"/>
+        
+        <entity type="lifeitem" name="lifeitem" width="30" height="35" texture="../data/graphics/sprites/life.png" id="enemyProjectile"/>
     </Physical>
 
     <Ui>
-        <entity type="uiLives" name="uiLives" x="20" y="20" width="33" height="26" texture="../data/graphics/ui/playerLife1_blue.png" id="uiLives" />
+        <entity type="uiLives" name="uiLives" x="20" y="20" width="33" height="26" texture="../data/graphics/ui/playerLife-ele.png" id="uiLives" />
         <entity type="uiScore" name="uiScore" x="806" y="20" width="198" height="26" id="uiScore" />
     </Ui>
 </State>

@@ -26,7 +26,7 @@
         <entity type="enemyStraight" x="100" y="-50" spawn-time="31000"/>
         <entity type="enemyStraight" x="900" y="-50" spawn-time="32000"/>
         <entity type="enemyZigZag" x="450" y="-50" spawn-time="33000"/>
-
+        <entity type="lifeitem" x="490" y="-50" spawn-time="34000"/> 
 
 
         <entity type="enemyZigZag" x="500" y="-50" spawn-time="37000"/>
