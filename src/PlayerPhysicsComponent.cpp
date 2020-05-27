@@ -43,13 +43,15 @@ void PlayerPhysicsComponent::update()
 	float timeSinceLastFrame = timeBasedMovementTimer.getTimeOnTimer() / 1000.f;
     gameEntity->position += velocity*timeSinceLastFrame;
 
-    if (gameEntity->position.x > windowElements->WINDOW_WIDTH)
+    // "windowElements->WINDOW_WIDTH" change to "windowElements->WINDOW_WIDTH-30"
+    if (gameEntity->position.x > windowElements->WINDOW_WIDTH-30)
     {
-        gameEntity->position.x = windowElements->WINDOW_WIDTH;
+        gameEntity->position.x = windowElements->WINDOW_WIDTH-30;
     }
-    else if (gameEntity->position.x < 0)
+    //" gameEntity->position.x < 0 " change to "gameEntity->position.x < 30"
+    else if (gameEntity->position.x < 30)
     {
-        gameEntity->position.x = 0;
+        gameEntity->position.x = 30;
     }
 
     int height = render->getRenderRect().h;
