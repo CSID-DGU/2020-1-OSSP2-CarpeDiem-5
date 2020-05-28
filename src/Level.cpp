@@ -105,19 +105,35 @@ void Level::onUpdate()
     std::string xmlPath;
     if (doneLevel)
     {
-        if (currentLevel < LEVEL_XML_PATH_SIZE)
+        // if (currentLevel < LEVEL_XML_PATH_SIZE)
+        // {
+        //     timer.stop();
+        //     doneLevel = false;
+        //     parse(currentLevel++);
+        //     //levelup page insert
+        //     //if(currentLevel==2){
+        //     //xmlPath = Util::fix_path("../data/xml/states/level_1.xml");}
+        //     notify(NULL, LEVEL_COMPLETED);
+        //     timer.start();
+        // }
+        // else
+        // {
+        //     notify(NULL, GAME_COMPLETED);
+        //     return;
+        // }
+        if (currentLevel < LEVEL_XML_PATH_SIZE-1)
         {
             timer.stop();
             doneLevel = false;
             parse(currentLevel++);
-            //levelup page insert
-            //if(currentLevel==2){
-            //xmlPath = Util::fix_path("../data/xml/states/level_1.xml");}
             notify(NULL, LEVEL_COMPLETED);
             timer.start();
         }
         else
         {
+            timer.stop();
+            doneLevel = false;
+            parse(currentLevel++);
             notify(NULL, GAME_COMPLETED);
             return;
         }
