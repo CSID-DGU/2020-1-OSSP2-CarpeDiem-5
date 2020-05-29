@@ -209,15 +209,16 @@ GameEntity* GameEntityFactory::createEntity(EntityXmlStruct xmlStruct)
 
         case ENTITY_ENEMYPROJECTILEHIT:
         {
-            SpriteRenderComponent* render = new SpriteRenderComponent(entity, windowElements);
-            SDL_Rect rect = render->getRenderRect();
-            rect.x = xmlStruct.x - xmlStruct.width/2;
-            rect.y = xmlStruct.y - xmlStruct.height/2;
-            render->setRenderRect(&rect);
-            render->setActiveTimer(100);
-            entity->addRenderComponent(render);
-            configureEntity(entity, xmlStruct);
-            gameEntityManager->addEffectEntity(entity);
+            // 장애물 레이저 생성 부분 삭제하기 위해 주석 처리
+            // SpriteRenderComponent* render = new SpriteRenderComponent(entity, windowElements);
+            // SDL_Rect rect = render->getRenderRect();
+            // rect.x = xmlStruct.x - xmlStruct.width/2;
+            // rect.y = xmlStruct.y - xmlStruct.height/2;
+            // render->setRenderRect(&rect);
+            // render->setActiveTimer(100);
+            // entity->addRenderComponent(render);
+            // configureEntity(entity, xmlStruct);
+            // gameEntityManager->addEffectEntity(entity);
             break;
         }
 
