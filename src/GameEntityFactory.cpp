@@ -194,21 +194,23 @@ GameEntity* GameEntityFactory::createEntity(EntityXmlStruct xmlStruct)
 
         case ENTITY_ENEMYPROJECTILE:
         {
-            EnemyProjectileRenderComponent* render = new EnemyProjectileRenderComponent(entity, windowElements);
-            entity->position.x = xmlStruct.x;
-            entity->position.y = xmlStruct.y
-                                - xmlStruct.height/2;
+             // 장애물 레이저 생성 부분 삭제하기 위해 주석 처리
+            // EnemyProjectileRenderComponent* render = new EnemyProjectileRenderComponent(entity, windowElements);
+            // entity->position.x = xmlStruct.x;
+            // entity->position.y = xmlStruct.y
+            //                     - xmlStruct.height/2;
 
-            entity->addRenderComponent(render);
-            entity->addPhysicsComponent(new EnemyProjectilePhysicsComponent(entity, windowElements, this));
-            entity->addCollisionComponent(new EnemyProjectileCollisionComponent(entity, windowElements, gameEntityManager->getCollisionManager()));
-            configureEntity(entity, xmlStruct);
-            gameEntityManager->addPhysicalEntity(entity);
+            // entity->addRenderComponent(render);
+            // entity->addPhysicsComponent(new EnemyProjectilePhysicsComponent(entity, windowElements, this));
+            // entity->addCollisionComponent(new EnemyProjectileCollisionComponent(entity, windowElements, gameEntityManager->getCollisionManager()));
+            // configureEntity(entity, xmlStruct);
+            // gameEntityManager->addPhysicalEntity(entity);
             break;
         }
 
         case ENTITY_ENEMYPROJECTILEHIT:
         {
+           
             SpriteRenderComponent* render = new SpriteRenderComponent(entity, windowElements);
             SDL_Rect rect = render->getRenderRect();
             rect.x = xmlStruct.x - xmlStruct.width/2;
@@ -253,7 +255,7 @@ GameEntity* GameEntityFactory::createEntity(EntityXmlStruct xmlStruct)
             gameEntityManager->addPhysicalEntity(entity);
             break;
         }
-
+        // level 1으로 사용
         case ENTITY_ENEMYSWOOPLEFT:
         {
             entity->addRenderComponent(new EnemyRenderComponent(entity, windowElements));
