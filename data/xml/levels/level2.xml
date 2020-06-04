@@ -4,6 +4,7 @@
     <settings time="75000" music="level1"/>
 
     <EnemyType>
+        <entity type="enemySwoopRight" x="350" y="354" spawn-time="8000"/>
         <entity type="enemyStraight" x="500" y="-50" spawn-time="9000"/>
         <entity type="enemyZigZag" x="100" y="-50" spawn-time="10000"/>
         <entity type="enemyStraight" x="900" y="-50" spawn-time="11000"/>
