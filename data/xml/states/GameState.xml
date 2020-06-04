@@ -19,12 +19,12 @@
 
         <entity type="enemyStraight" name="enemyStraight" width="40" height="45" texture="../data/graphics/sprites/obstacle_1.png" id="enemyStraight"/>
         <entity type="enemyZigZag" name="enemyZigZag" width="40" height="45" texture="../data/graphics/sprites/obstacle_2.png" id="enemyZigZag"/>
-        <entity type="enemySwoopLeft" name="enemySwoopLeft" width="75" height="68" texture="../data/graphics/sprites/enemyBlack1.png" id="enemySwoopLeft"/>
-        <entity type="enemySwoopRight" name="enemySwoopRight" width="75" height="68" texture="../data/graphics/sprites/enemyBlack1.png" id="enemySwoopRight"/>
-        <entity type="enemyCarrier" name="enemyCarrier" width="125" height="128" texture="../data/graphics/sprites/enemyBlack4.png" id="enemyCarrier"/>
-        <entity type="enemyKamikaze" name="enemyKamikaze" width="65" height="56" texture="../data/graphics/sprites/enemyBlack5.png" id="enemyKamikaze"/>
-        <entity type="enemyBoss" name="enemyBoss" width="300" height="180" texture="../data/graphics/sprites/enemyBoss1.png" id="enemyBoss"/>
-        <entity type="enemyUFO" name="enemyUFO" width="50" height="50" texture="../data/graphics/sprites/ufoRed.png" id="enemyUFO"/>
+        <entity type="enemySwoopLeft" name="enemySwoopLeft" width="332" height="60"  texture="../data/graphics/sprites/level1.png" id="enemySwoopLeft"/>
+        <entity type="enemySwoopRight" name="enemySwoopRight"  width="332" height="60"  texture="../data/graphics/sprites/level2.png" id="enemySwoopRight"/>
+        <entity type="enemyCarrier" name="enemyCarrier" width="332" height="60"  texture="../data/graphics/sprites/level3.png" id="enemyCarrier"/>
+        <entity type="enemyKamikaze" name="enemyKamikaze" width="332" height="60"  texture="../data/graphics/sprites/level4.png"  id="enemyKamikaze"/>
+        <entity type="enemyBoss" name="enemyBoss"  width="332" height="60"  texture="../data/graphics/sprites/level5.png"  id="enemyBoss"/>
+        <entity type="enemyUFO" name="enemyUFO" width="332" height="60" texture="../data/graphics/sprites/level4.png"  id="enemyUFO"/>
 
         <entity type="playerProjectile" name="playerProjectile" width="10" height="30" texture="../data/graphics/sprites/water.png" id="playerProjectile"/>
         <entity type="enemyProjectile" name="enemyProjectile" width="8" height="35" texture="../data/graphics/sprites/laserRed03.png" id="enemyProjectile"/>

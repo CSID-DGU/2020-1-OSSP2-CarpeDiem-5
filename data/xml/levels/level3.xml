@@ -3,7 +3,8 @@
 <Level>
     <settings time="75000" music="level1"/>
 
-    <EnemyType>
+    <EnemyType> 
+        <entity type="enemyCarrier"x="350" y="354" spawn-time="8000"/>
         <entity type="enemyZigZag" x="500" y="-50" spawn-time="9000"/>
         <entity type="enemyStraight" x="700" y="-50" spawn-time="9500"/>
         <entity type="enemyStraight" x="900" y="-50" spawn-time="10000"/>
