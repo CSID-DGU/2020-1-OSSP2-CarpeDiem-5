@@ -3,7 +3,12 @@
 <Level>
     <settings time="75000" music="level1"/>
 
+
+</State>
+    
     <EnemyType>
+      
+       <entity type="enemySwoopLeft" x="500" y="500" spawn-time="8000"/>
         <entity type="enemyZigZag" x="500" y="-50" spawn-time="9000"/>
         <entity type="enemyStraight" x="100" y="-50" spawn-time="10000"/>
         <entity type="enemyZigZag" x="900" y="-50" spawn-time="11000"/>
