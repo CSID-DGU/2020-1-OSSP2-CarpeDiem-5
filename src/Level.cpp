@@ -120,7 +120,7 @@ void Level::onUpdate()
         else
         {
             timer.stop();
-            notify(NULL, GAME_OVER);
+            notify(NULL, GAME_COMPLETED);
             return;
 
         }
