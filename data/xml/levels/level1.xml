@@ -1,14 +1,18 @@
 <?xml version="1.0" ?>
 
 <Level>
-    <settings time="75000" music="level1"/>
+    <settings time="54000" music="level1"/>
 
 
 
     
     <EnemyType>
       
-       <entity type="enemySwoopLeft" x="500" y="500" spawn-time="8000"/>
+        <entity type="enemySwoopLeft" x="530" y="10" spawn-time="20"/>
+        <entity type="enemyZigZag" x="500" y="-300" spawn-time="6000"/>
+        <entity type="enemyStraight" x="500" y="-50" spawn-time="6200"/>
+        <entity type="enemyZigZag" x="300" y="-50" spawn-time="7000"/>
+        <entity type="enemyStraight" x="500" y="-50" spawn-time="8000"/>
         <entity type="enemyZigZag" x="500" y="-50" spawn-time="9000"/>
         <entity type="enemyStraight" x="100" y="-50" spawn-time="10000"/>
         <entity type="enemyZigZag" x="900" y="-50" spawn-time="11000"/>
