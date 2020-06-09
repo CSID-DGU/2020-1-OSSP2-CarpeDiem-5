@@ -44,6 +44,9 @@ UILivesRenderComponent::UILivesRenderComponent(GameEntity* gameEntity,
     numLivesTextures[4] = new Texture(windowElements);
     numLivesTextures[4]->setTexture(Util::fix_path("../data/graphics/ui/numeral4.png"));
 
+    numLivesTextures[5] = new Texture(windowElements);
+    numLivesTextures[5]->setTexture(Util::fix_path("../data/graphics/ui/numeral5.png"));
+
     renderRect.x = 20;
     renderRect.y = 20;
     renderRect.w = 10;
