@@ -1,20 +1,27 @@
 <?xml version="1.0" ?>
 
 <Level>
-    <settings time="75000" music="level1"/>
+    <settings time="65000" music="level1"/>
 
     <EnemyType> 
-        <entity type="enemyCarrier"x="350" y="354" spawn-time="8000"/>
+        <entity type="enemyCarrier" x="530" y="10" spawn-time="20"/>
+        <entity type="enemyZigZag" x="500" y="-300" spawn-time="6000"/>
+        <entity type="enemyStraight" x="500" y="-50" spawn-time="6200"/>
+        <entity type="enemyStraight" x="500" y="-50" spawn-time="8000"/>
         <entity type="enemyZigZag" x="500" y="-50" spawn-time="9000"/>
         <entity type="enemyStraight" x="700" y="-50" spawn-time="9500"/>
         <entity type="enemyStraight" x="900" y="-50" spawn-time="10000"/>
         <entity type="enemyZigZag" x="300" y="-50" spawn-time="10000"/>
         <entity type="enemyStraight" x="750" y="-50" spawn-time="11500"/>
-        <entity type="lifeitem" x="250" y="-50" spawn-time="115000"/>
+        <entity type="lifeitem" x="250" y="-50" spawn-time="11500"/>
         <entity type="enemyZigZag" x="450" y="-50" spawn-time="12000"/>
-        <entity type="enemyStraight" x="350" y="-50" spawn-time="13500"/>
         <entity type="enemyZigZag" x="250" y="-50" spawn-time="12500"/>
-        <entity type="enemyStraight" x="950" y="-50" spawn-time="12500"/>
+        <entity type="enemyStraight" x="950" y="-50" spawn-time="12510"/>
+        <entity type="enemyZigZag" x="250" y="-50" spawn-time="12520"/>
+        <entity type="enemyZigZag" x="200" y="-50" spawn-time="12530"/>
+        <entity type="enemyStraight" x="350" y="-50" spawn-time="13500"/>
+      
+       
         <entity type="enemyZigZag" x="600" y="-50" spawn-time="14000"/>
         <entity type="enemyStraight" x="250" y="-50" spawn-time="14500"/>
         <entity type="enemyZigZag" x="850" y="-50" spawn-time="15000"/>
@@ -25,22 +32,26 @@
         <entity type="enemyStraight" x="800" y="-50" spawn-time="17500"/>
         <entity type="enemyZigZag" x="650" y="-50" spawn-time="18000"/>
 
+        <entity type="enemyZigZag" x="200" y="-50" spawn-time="22000"/>
+        <entity type="enemyStraight" x="824" y="-50" spawn-time="23000"/>
+        <entity type="enemyZigZag" x="668" y="-50" spawn-time="24001"/> 
+        <entity type="enemyZigZag" x="924" y="-50" spawn-time="24002"/>
+        <entity type="enemyZigZag" x="668" y="-50" spawn-time="24003"/> 
+        <entity type="enemyZigZag" x="924" y="-50" spawn-time="24004"/>
         <entity type="lifeitem" x="800" y="-50" spawn-time="25000"/>
 	    <entity type="enemyStraight" x="100" y="-50" spawn-time="26000"/>
-        <entity type="enemyZigZag" x="200" y="-50" spawn-time="23000"/>
-        <entity type="enemyStraight" x="356" y="-50" spawn-time="26000"/>
-        <entity type="enemyZigZag" x="668" y="-50" spawn-time="24000"/>
-        <entity type="enemyStraight" x="824" y="-50" spawn-time="23000"/>
-        <entity type="enemyZigZag" x="924" y="-50" spawn-time="24000"/>
+        <entity type="enemyStraight" x="356" y="-50" spawn-time="26100"/>
+        <entity type="enemyZigZag" x="668" y="-50" spawn-time="27000"/> 
+        <entity type="enemyZigZag" x="924" y="-50" spawn-time="28000"/>
         <entity type="enemyStraight" x="824" y="-50" spawn-time="29000"/>
-        <entity type="enemyZigZag" x="224" y="-50" spawn-time="29000"/>
+        <entity type="enemyZigZag" x="224" y="-50" spawn-time="29100"/>
         <entity type="enemyStraight" x="924" y="-50" spawn-time="30000"/>
-        <entity type="enemyZigZag" x="124" y="-50" spawn-time="30000"/>
-        <entity type="enemyStraight" x="100" y="-50" spawn-time="31000"/>
-        <entity type="enemyZigZag" x="356" y="-50" spawn-time="32000"/>
+        <entity type="enemyZigZag" x="124" y="-50" spawn-time="31000"/>
+        <entity type="enemyStraight" x="100" y="-50" spawn-time="32000"/>
+        <entity type="enemyZigZag" x="356" y="-50" spawn-time="33000"/>
 
-        <entity type="enemyStraight" x="380" y="-50" spawn-time="37000"/>
-        <entity type="enemyZigZag" x="720" y="-50" spawn-time="37500"/>
+        <entity type="enemyStraight" x="380" y="-50" spawn-time="36000"/>
+        <entity type="enemyZigZag" x="720" y="-50" spawn-time="37000"/>
         <entity type="enemyStraight" x="120" y="-50" spawn-time="38000"/>
         <entity type="enemyZigZag" x="380" y="-50" spawn-time="38500"/>
         <entity type="enemyStraight" x="880" y="-50" spawn-time="39000"/>
@@ -60,21 +71,23 @@
         <entity type="enemyStraight" x="650" y="-50" spawn-time="46000"/>
 
         <entity type="lifeitem" x="600" y="-50" spawn-time="52000"/> 
-        <entity type="enemyZigZag" x="100" y="-50" spawn-time="55000"/>
-        <entity type="enemyStraight" x="200" y="-50" spawn-time="51000"/>
+        <entity type="enemyZigZag" x="100" y="-50" spawn-time="53000"/>
+        <entity type="enemyStraight" x="200" y="-50" spawn-time="54000"/>
         <entity type="enemyZigZag" x="356" y="-50" spawn-time="55000"/>
-        <entity type="enemyStraight" x="512" y="-50" spawn-time="51000"/>
-        <entity type="enemyZigZag" x="668" y="-50" spawn-time="55000"/>
-        <entity type="enemyStraight" x="824" y="-50" spawn-time="51000"/>
-        <entity type="enemyZigZag" x="924" y="-50" spawn-time="55000"/>
+        <entity type="enemyStraight" x="512" y="-50" spawn-time="56000"/>
+        <entity type="enemyZigZag" x="668" y="-50" spawn-time="56500"/>
+        <entity type="enemyStraight" x="824" y="-50" spawn-time="57000"/>
+        <entity type="enemyZigZag" x="924" y="-50" spawn-time="57500"/>
         <entity type="enemyStraight" x="824" y="-50" spawn-time="58000"/>
-        <entity type="enemyZigZag" x="224" y="-50" spawn-time="58000"/>
+        <entity type="enemyZigZag" x="224" y="-50" spawn-time="58500"/>
         <entity type="enemyStraight" x="924" y="-50" spawn-time="59000"/>
-        <entity type="enemyZigZag" x="124" y="-50" spawn-time="59000"/>
-        <entity type="enemyStraight" x="100" y="-50" spawn-time="60000"/>
-        <entity type="enemyZigZag" x="356" y="-50" spawn-time="60000"/>
-        <entity type="enemyStraight" x="668" y="-50" spawn-time="60000"/>
-        <entity type="enemyZigZag" x="924" y="-50" spawn-time="60000"/>
+        <entity type="enemyZigZag" x="124" y="-50" spawn-time="59500"/>
+        <entity type="enemyStraight" x="100" y="-50" spawn-time="61000"/>
+        <entity type="enemyStraight" x="100" y="-50" spawn-time="61001"/>
+        <entity type="enemyStraight" x="100" y="-50" spawn-time="61002"/>
+        <entity type="enemyZigZag" x="356" y="-50" spawn-time="62000"/>
+        <entity type="enemyStraight" x="668" y="-50" spawn-time="63000"/>
+        <entity type="enemyZigZag" x="924" y="-50" spawn-time="64000"/>
     </EnemyType>
 </Level>
 
