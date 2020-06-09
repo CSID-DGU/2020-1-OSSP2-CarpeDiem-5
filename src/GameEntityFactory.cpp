@@ -179,7 +179,7 @@ GameEntity* GameEntityFactory::createEntity(EntityXmlStruct xmlStruct)
         {
             entity->addRenderComponent(new EnemyRenderComponent(entity, windowElements));
             EnemyPhysicsComponent* physics = new EnemyPhysicsComponent(entity, windowElements, this);
-            physics->getMovementPattern()->setMovementPattern(MOVEMENT_STRAIGHT);
+            physics->getMovementPattern()->setMovementPattern(MOVEMENT_BOSS);
             entity->setScore(1000);
             physics->addObserver(dynamic_cast<IObserver*>(gameEntityManager->getState()));
             entity->addPhysicsComponent(physics);
@@ -259,7 +259,7 @@ GameEntity* GameEntityFactory::createEntity(EntityXmlStruct xmlStruct)
         {
             entity->addRenderComponent(new EnemyRenderComponent(entity, windowElements));
             EnemyPhysicsComponent* physics = new EnemyPhysicsComponent(entity, windowElements, this);
-            physics->getMovementPattern()->setMovementPattern(MOVEMENT_STRAIGHT);
+            physics->getMovementPattern()->setMovementPattern(MOVEMENT_SWOOPLEFT);
             entity->setScore(1000);
             physics->addObserver(dynamic_cast<IObserver*>(gameEntityManager->getState()));
             entity->addPhysicsComponent(physics);
@@ -275,7 +275,7 @@ GameEntity* GameEntityFactory::createEntity(EntityXmlStruct xmlStruct)
         {
             entity->addRenderComponent(new EnemyRenderComponent(entity, windowElements));
             EnemyPhysicsComponent* physics = new EnemyPhysicsComponent(entity, windowElements, this);
-            physics->getMovementPattern()->setMovementPattern(MOVEMENT_STRAIGHT);
+            physics->getMovementPattern()->setMovementPattern(MOVEMENT_SWOOPRIGHT);
             entity->setScore(1000);
             physics->addObserver(dynamic_cast<IObserver*>(gameEntityManager->getState()));
             entity->addPhysicsComponent(physics);
@@ -318,6 +318,7 @@ GameEntity* GameEntityFactory::createEntity(EntityXmlStruct xmlStruct)
             gameEntityManager->addPhysicalEntity(entity);
             break;
         }
+        
 
         case ENTITY_EXPLOSION:
         {
