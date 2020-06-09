@@ -14,3 +14,34 @@
 - 장애물 낙하 속도 변경 (사실은 속도가 아니라, 등장 빈도 조절)
 - 레벨업 창 gui 코드 추가.
 - 목숨 아이템에 사용될 cpp와 헤더파일 수정 중.
+
+6/9 
+- 레벨업 이미지 추가
+- 장애물 낙하 빈도 조정
+- 목숨 아이템 추가 -현재까지는 총알에 닿았을 때만 목숨 증가 (최대 5까지 증가)
+- 새로 생성한 파일:
+LifeitemCollisionComponent.h
+LifeitemPhysicsComponent.h
+LifeitemRenderComponent.h
+LifeitemCollisionComponent.cpp
+LifeitemPhysicsComponent.cpp
+LifeitemRenderComponent.cpp
+
+- 변경한 파일:
+[xml 파일]
+GameState.xml
+level1.xml
+level2.xml
+level3.xml
+level4.xml
+boss.xml
+
+[.h/ .cpp 파일]
+GameEntityFactory.cpp
+GameEntityFactory.h
+GameState.cpp
+GameState.h
+UILivesRenderComponent.cpp
+
+[Makefile]
+- 새로 생성한 파일에 대한 .o 코드 추가
