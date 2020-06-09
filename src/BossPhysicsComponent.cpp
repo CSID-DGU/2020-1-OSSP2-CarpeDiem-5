@@ -22,7 +22,7 @@ BossPhysicsComponent::BossPhysicsComponent(GameEntity* gameEntity,
                                             GameEntityFactory* gameEntityFactory)
 :   gameEntityFactory(gameEntityFactory),
     render(NULL),
-    shooting(true)
+    shooting(false)
 {
     this->gameEntity = gameEntity;
     this->windowElements = windowElements;
