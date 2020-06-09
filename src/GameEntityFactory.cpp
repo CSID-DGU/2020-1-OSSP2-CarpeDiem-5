@@ -50,6 +50,9 @@
 #include "Util.h"
 #include "Vector2D.h"
 #include "WindowElements.h"
+#include "LifeitemCollisionComponent.h"
+#include "LifeitemPhysicsComponent.h"
+#include "LifeitemRenderComponent.h"
 
 GameEntityFactory::GameEntityFactory(GameEntityManager* gameEntityManager,
                                     WindowElements* windowElements)
@@ -77,6 +80,7 @@ GameEntityFactory::GameEntityFactory(GameEntityManager* gameEntityManager,
     stringToEntityEnum["uiLives"] = ENTITY_UILIVES;
     stringToEntityEnum["uiPanel"] = ENTITY_UIPANEL;
     stringToEntityEnum["uiScore"] = ENTITY_UISCORE;
+    stringToEntityEnum["lifeitem"] = ENTITY_LIFEITEM; // map¿¡ ¸ñ¼û ¾ÆÀÌÅÛ Ãß°¡
 }
 
 GameEntityFactory::~GameEntityFactory()
@@ -193,7 +197,7 @@ GameEntity* GameEntityFactory::createEntity(EntityXmlStruct xmlStruct)
 
         case ENTITY_ENEMYPROJECTILE:
         {
-             // ìž¥ì• ë¬¼ ë ˆì´ì € ìƒì„± ë¶€ë¶„ ì‚­ì œí•˜ê¸° ìœ„í•´ ì£¼ì„ ì²˜ë¦¬ -> error ë°œìƒ
+             // ?ž¥?• ë¬? ? ˆ?´??? ?ƒ?„± ë¶?ë¶? ?‚­? œ?•˜ê¸? ?œ„?•´ ì£¼ì„ ì²˜ë¦¬ -> error ë°œìƒ
             EnemyProjectileRenderComponent* render = new EnemyProjectileRenderComponent(entity, windowElements);
             entity->position.x = xmlStruct.x;
             entity->position.y = xmlStruct.y
@@ -238,6 +242,22 @@ GameEntity* GameEntityFactory::createEntity(EntityXmlStruct xmlStruct)
             break;
         }
 
+        case ENTITY_LIFEITEM: // ¸ñ¼û ¾ÆÀÌÅÛ
+        {
+            entity->addRenderComponent(new LifeitemRenderComponent(entity, windowElements));
+            LifeitemPhysicsComponent* physics = new LifeitemPhysicsComponent(entity, windowElements, this);
+            physics->getMovementPattern()->setMovementPattern(MOVEMENT_STRAIGHT);
+        //    entity->setScore(100);
+            physics->addObserver(dynamic_cast<IObserver*>(gameEntityManager->getState()));
+            entity->addPhysicsComponent(physics);
+            entity->addCollisionComponent(new LifeitemCollisionComponent(entity, windowElements, gameEntityManager->getCollisionManager()));
+            entity->position.x = xmlStruct.x;
+            entity->position.y = xmlStruct.y;
+            configureEntity(entity, xmlStruct);
+            gameEntityManager->addPhysicalEntity(entity);
+            break;
+        }
+
         case ENTITY_ENEMYCARRIER:
         {
             entity->addRenderComponent(new EnemyRenderComponent(entity, windowElements));
@@ -254,7 +274,7 @@ GameEntity* GameEntityFactory::createEntity(EntityXmlStruct xmlStruct)
             break;
 
         }
-        // level 1ìœ¼ë¡œ ì‚¬ìš©
+        // level 1?œ¼ë¡? ?‚¬?š©
         case ENTITY_ENEMYSWOOPLEFT:
         {
             entity->addRenderComponent(new EnemyRenderComponent(entity, windowElements));
