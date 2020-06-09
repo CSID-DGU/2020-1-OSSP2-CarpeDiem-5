@@ -4,12 +4,13 @@
  * @author      Brandon To
  * @version     1.0
  * @since       2015-02-12
- * @modified    2015-02-19
+ * @modified    2020-06-09   by sujeong
  *********************************************************************/
 #include "GameEntityData.h"
 
 #include <cstdio>
 #include <string>
+#include <string.h>
 
 #ifdef _WIN32
 	#include <SDL.h>
@@ -126,9 +127,11 @@ EntityXmlStruct GameEntityData::getDataByType(ApplicationState* state, std::stri
             return (*collectionIterator);
         }
     }
-
-    printf("[ERROR] getDataByName(): no data with type %s\n", type.c_str());
+    if(strcmp(type.c_str(),"playerProjectileHit")!=0){
+        printf("[ERROR] getDataByName(): no data with type %s\n", type.c_str());
+    }
     EntityXmlStruct error;
     return error;
+    
 }
 
