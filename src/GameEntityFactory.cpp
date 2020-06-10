@@ -197,7 +197,7 @@ GameEntity* GameEntityFactory::createEntity(EntityXmlStruct xmlStruct)
 
         case ENTITY_ENEMYPROJECTILE:
         {
-             // ?ž¥?• ë¬? ? ˆ?´??? ?ƒ?„± ë¶?ë¶? ?‚­? œ?•˜ê¸? ?œ„?•´ ì£¼ì„ ì²˜ë¦¬ -> error ë°œìƒ
+            // Àå¾Ö¹° ·¹ÀÌÀú »ý¼º ºÎºÐ »èÁ¦ÇÏ±â À§ÇØ ÁÖ¼® Ã³¸® -> error ¹ß»ý
             EnemyProjectileRenderComponent* render = new EnemyProjectileRenderComponent(entity, windowElements);
             entity->position.x = xmlStruct.x;
             entity->position.y = xmlStruct.y
@@ -274,7 +274,7 @@ GameEntity* GameEntityFactory::createEntity(EntityXmlStruct xmlStruct)
             break;
 
         }
-        // level 1?œ¼ë¡? ?‚¬?š©
+        // level 1À¸·Î »ç¿ë
         case ENTITY_ENEMYSWOOPLEFT:
         {
             entity->addRenderComponent(new EnemyRenderComponent(entity, windowElements));
