@@ -84,6 +84,7 @@ enum EntityEnum
     ENTITY_UILIVES,
     ENTITY_UIPANEL,
     ENTITY_UISCORE,
+    ENTITY_LIFEITEM     // 목숨 아이템 enum 상수 추가
 };
 
 #endif

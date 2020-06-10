@@ -73,6 +73,7 @@ enum observingEvents
     GAME_OVER,
     LEVEL_COMPLETED,
     PLAYER_DESTROYED,
+    LIFEITEM_DESTROYED
 };
 
 

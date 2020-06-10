@@ -12,7 +12,7 @@ License : MIT License
 Music
 =================
 
-사용 음악( 라이센스 표시는 license파일에 명시)
+사용 음악 (라이센스 표시는 license파일에 명시)
 
 - Menu State: menu.ogg
 - Game State: level1.ogg
@@ -52,7 +52,7 @@ Libraries
 Dependancies: lSDL2, lSDL2_image, lSDL2_ttf, and lSDL2_mixer.
 
 
-Linux 
+Linux에서 실행 방법
 =================
 
 [1] Libraries 설치 (Run the following commands on bash:)

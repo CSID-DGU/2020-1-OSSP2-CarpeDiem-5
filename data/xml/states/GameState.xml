@@ -29,7 +29,7 @@
         <entity type="playerProjectile" name="playerProjectile" width="10" height="30" texture="../data/graphics/sprites/water.png" id="playerProjectile"/>
         <entity type="enemyProjectile" name="enemyProjectile" width="8" height="35" texture="../data/graphics/sprites/laserRed03.png" id="enemyProjectile"/>
         
-        <entity type="lifeitem" name="lifeitem" width="30" height="35" texture="../data/graphics/sprites/life.png" id="enemyProjectile"/>
+        <entity type="lifeitem" name="lifeitem" width="30" height="35" texture="../data/graphics/sprites/life.png" id="lifeitem"/>
     </Physical>
 
     <Ui>
