@@ -22,7 +22,7 @@ PlayerProjectileRenderComponent::PlayerProjectileRenderComponent(GameEntity* gam
     this->windowElements = windowElements;
 
     texture = new Texture(windowElements);
-    texture->setTexture(Util::fix_path("../data/graphics/sprites/laserBlue03.png"));
+    texture->setTexture(Util::fix_path("../data/graphics/sprites/water.png"));
 
     //renderRect.w = texture->getSpriteWidth();
     //renderRect.h = texture->getSpriteHeight();
@@ -32,8 +32,9 @@ PlayerProjectileRenderComponent::PlayerProjectileRenderComponent(GameEntity* gam
 
 void PlayerProjectileRenderComponent::update()
 {
-    renderRect.x = gameEntity->position.x - texture->getSpriteWidth()/2;
-    renderRect.y = gameEntity->position.y - texture->getSpriteHeight()/2;
+    // 코끼리 코에서 물총 나오도록 위치 조정
+    renderRect.x = gameEntity->position.x - 4*texture->getSpriteWidth();
+    renderRect.y = gameEntity->position.y + texture->getSpriteHeight();
     SDL_RenderCopy(windowElements->renderer, texture->getTexture(), NULL, &renderRect);
 }
 
