@@ -103,10 +103,10 @@ void Level::parse(int level)
 void Level::onUpdate()
 {
     std::string xmlPath;
-    // 이제 보스 레밸도 들어올 수 있음. 
+    
     if (doneLevel)
     {
-        // 4까지 허용해서 보스에 대한 정보까지 가져옴. 
+         
         if (currentLevel < LEVEL_XML_PATH_SIZE)
         {
             timer.stop();
@@ -115,8 +115,7 @@ void Level::onUpdate()
             notify(NULL, LEVEL_COMPLETED);
             timer.start();
         }
-        // currentLevel 이 LEVEL_XML_PATH_SIZE인 경우
-        // 보스레벨을 done한것이기 때문에 게임 완료해줌. 
+        
         else
         {
             timer.stop();
@@ -143,9 +142,7 @@ void Level::onUpdate()
         }
     }
 
-   // if (!bossLevel && timer.getTimeOnTimer() > levelFinishTime)
-   // 여기서 보스 레벨은 doneLevel로 바뀌지 않아 위에서 게임 종료가 되지않음. 
-   // !bossLevel 조건을 지움 
+   
     if (timer.getTimeOnTimer() > levelFinishTime)
     {
         doneLevel = true;
