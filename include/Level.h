@@ -25,7 +25,7 @@
 #include "Timer.h"
 
 //#define LEVEL_XML_PATH_SIZE 1
-#define LEVEL_XML_PATH_SIZE 2
+#define LEVEL_XML_PATH_SIZE 5
 
 class GameEntity;
 

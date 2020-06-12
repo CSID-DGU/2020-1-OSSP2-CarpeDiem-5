@@ -53,28 +53,15 @@ void MovementPattern::setMovementPattern(int patternId)
     }
     else if (patternId == MOVEMENT_SWOOPLEFT)
     {
-        Vector2D vector1(-400, 100);
-        Vector2D vector2(120, 200);
-        Vector2D vector3(0, 150);
-        int time = 2000;
-        velocityQueue.push(vector1);
-        velocityQueue.push(vector2);
-        velocityQueue.push(vector3);
-        timeQueue.push(time);
-        timeQueue.push(time);
+        Vector2D vector(0, 150);
+        int time = 6000;
+        velocityQueue.push(vector);
         timeQueue.push(time);
     }
     else if (patternId == MOVEMENT_SWOOPRIGHT)
-    {
-        Vector2D vector1(400, 100);
-        Vector2D vector2(-120, 200);
-        Vector2D vector3(0, 150);
-        int time = 2000;
-        velocityQueue.push(vector1);
-        velocityQueue.push(vector2);
-        velocityQueue.push(vector3);
-        timeQueue.push(time);
-        timeQueue.push(time);
+    {   Vector2D vector(0, 150);
+        int time = 6000;
+        velocityQueue.push(vector);
         timeQueue.push(time);
     }
     else if (patternId == MOVEMENT_STRAIGHTSLOW)
@@ -93,71 +80,10 @@ void MovementPattern::setMovementPattern(int patternId)
     }
     else if (patternId == MOVEMENT_BOSS)
     {
-        Vector2D vector1(0, 75);
-        Vector2D vector2(0, 0);
-        Vector2D vector3(-50, -50);
-        Vector2D vector4(50, 50);
-        Vector2D vector5(50, -50);
-        Vector2D vector6(-50, 50);
-        Vector2D vector7(0, 200);
-        int time1 = 3000;
-        int time2 = 5000;
-        velocityQueue.push(vector1);
-        velocityQueue.push(vector2);
-        velocityQueue.push(vector3);
-        velocityQueue.push(vector4);
-        velocityQueue.push(vector5);
-        velocityQueue.push(vector6);
-        velocityQueue.push(vector2);
-        velocityQueue.push(vector3);
-        velocityQueue.push(vector4);
-        velocityQueue.push(vector5);
-        velocityQueue.push(vector6);
-        velocityQueue.push(vector2);
-        velocityQueue.push(vector3);
-        velocityQueue.push(vector4);
-        velocityQueue.push(vector5);
-        velocityQueue.push(vector6);
-        velocityQueue.push(vector2);
-        velocityQueue.push(vector3);
-        velocityQueue.push(vector4);
-        velocityQueue.push(vector5);
-        velocityQueue.push(vector6);
-        velocityQueue.push(vector2);
-        velocityQueue.push(vector3);
-        velocityQueue.push(vector4);
-        velocityQueue.push(vector5);
-        velocityQueue.push(vector6);
-        velocityQueue.push(vector2);
-        velocityQueue.push(vector7);
-        timeQueue.push(time1);
-        timeQueue.push(time2);
-        timeQueue.push(time1);
-        timeQueue.push(time1);
-        timeQueue.push(time1);
-        timeQueue.push(time1);
-        timeQueue.push(time2);
-        timeQueue.push(time1);
-        timeQueue.push(time1);
-        timeQueue.push(time1);
-        timeQueue.push(time1);
-        timeQueue.push(time2);
-        timeQueue.push(time1);
-        timeQueue.push(time1);
-        timeQueue.push(time1);
-        timeQueue.push(time1);
-        timeQueue.push(time2);
-        timeQueue.push(time1);
-        timeQueue.push(time1);
-        timeQueue.push(time1);
-        timeQueue.push(time1);
-        timeQueue.push(time2);
-        timeQueue.push(time1);
-        timeQueue.push(time1);
-        timeQueue.push(time1);
-        timeQueue.push(time1);
-        timeQueue.push(time2);
-        timeQueue.push(time2);
+        Vector2D vector(0, 150);
+        int time = 6000;
+        velocityQueue.push(vector);
+        timeQueue.push(time);
     }
 
     currentVelocity = velocityQueue.front();

@@ -71,7 +71,10 @@ _OBJS =	main.o \
 		UIScoreRenderComponent.o \
 		Util.o \
 		Vector2D.o \
-		VictoryState.o
+		VictoryState.o \
+		LifeitemCollisionComponent.o \
+		LifeitemRenderComponent.o \
+		LifeitemPhysicsComponent.o 
 
 OBJS = $(patsubst %,$(ODIR)/%,$(_OBJS))
 

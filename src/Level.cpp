@@ -4,7 +4,7 @@
  * @author      Brandon To
  * @version     1.0
  * @since       2015-02-14
- * @modified    2015-02-25
+ * @modified    2020-06-08 by sujeong-choi
  *********************************************************************/
 #include "Level.h"
 
@@ -20,7 +20,10 @@ Level::Level()
     nextSpawnTime()
 {
     levelXmlPaths[0] = Util::fix_path("../data/xml/levels/level1.xml");
-    levelXmlPaths[1] = Util::fix_path("../data/xml/levels/boss.xml");
+    levelXmlPaths[1] = Util::fix_path("../data/xml/levels/level2.xml");
+    levelXmlPaths[2] = Util::fix_path("../data/xml/levels/level3.xml");
+    levelXmlPaths[3] = Util::fix_path("../data/xml/levels/level4.xml");
+    levelXmlPaths[4] = Util::fix_path("../data/xml/levels/boss.xml");
     //levelXmlPaths[0] = Util::fix_path("../data/xml/levels/boss.xml");
 }
 
@@ -99,8 +102,11 @@ void Level::parse(int level)
 
 void Level::onUpdate()
 {
+    std::string xmlPath;
+    // 이제 보스 레밸도 들어올 수 있음. 
     if (doneLevel)
     {
+        // 4까지 허용해서 보스에 대한 정보까지 가져옴. 
         if (currentLevel < LEVEL_XML_PATH_SIZE)
         {
             timer.stop();
@@ -109,10 +115,14 @@ void Level::onUpdate()
             notify(NULL, LEVEL_COMPLETED);
             timer.start();
         }
+        // currentLevel 이 LEVEL_XML_PATH_SIZE인 경우
+        // 보스레벨을 done한것이기 때문에 게임 완료해줌. 
         else
         {
+            timer.stop();
             notify(NULL, GAME_COMPLETED);
             return;
+
         }
     }
 
@@ -133,7 +143,10 @@ void Level::onUpdate()
         }
     }
 
-    if (!bossLevel && timer.getTimeOnTimer() > levelFinishTime)
+   // if (!bossLevel && timer.getTimeOnTimer() > levelFinishTime)
+   // 여기서 보스 레벨은 doneLevel로 바뀌지 않아 위에서 게임 종료가 되지않음. 
+   // !bossLevel 조건을 지움 
+    if (timer.getTimeOnTimer() > levelFinishTime)
     {
         doneLevel = true;
     }

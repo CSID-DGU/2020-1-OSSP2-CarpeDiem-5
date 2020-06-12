@@ -50,6 +50,9 @@
 #include "Util.h"
 #include "Vector2D.h"
 #include "WindowElements.h"
+#include "LifeitemCollisionComponent.h"
+#include "LifeitemPhysicsComponent.h"
+#include "LifeitemRenderComponent.h"
 
 GameEntityFactory::GameEntityFactory(GameEntityManager* gameEntityManager,
                                     WindowElements* windowElements)
@@ -77,6 +80,7 @@ GameEntityFactory::GameEntityFactory(GameEntityManager* gameEntityManager,
     stringToEntityEnum["uiLives"] = ENTITY_UILIVES;
     stringToEntityEnum["uiPanel"] = ENTITY_UIPANEL;
     stringToEntityEnum["uiScore"] = ENTITY_UISCORE;
+    stringToEntityEnum["lifeitem"] = ENTITY_LIFEITEM; // map에 목숨 아이템 추가
 }
 
 GameEntityFactory::~GameEntityFactory()
@@ -178,10 +182,9 @@ GameEntity* GameEntityFactory::createEntity(EntityXmlStruct xmlStruct)
         case ENTITY_ENEMYBOSS:
         {
             entity->addRenderComponent(new EnemyRenderComponent(entity, windowElements));
-            BossPhysicsComponent* physics = new BossPhysicsComponent(entity, windowElements, this);
+            EnemyPhysicsComponent* physics = new EnemyPhysicsComponent(entity, windowElements, this);
             physics->getMovementPattern()->setMovementPattern(MOVEMENT_BOSS);
-            physics->setMaxHealth(xmlStruct.health);
-            entity->setScore(8000);
+            entity->setScore(1000);
             physics->addObserver(dynamic_cast<IObserver*>(gameEntityManager->getState()));
             entity->addPhysicsComponent(physics);
             entity->addCollisionComponent(new EnemyCollisionComponent(entity, windowElements, gameEntityManager->getCollisionManager()));
@@ -194,6 +197,7 @@ GameEntity* GameEntityFactory::createEntity(EntityXmlStruct xmlStruct)
 
         case ENTITY_ENEMYPROJECTILE:
         {
+            // 장애물 레이저 생성 부분 삭제하기 위해 주석 처리 -> error 발생
             EnemyProjectileRenderComponent* render = new EnemyProjectileRenderComponent(entity, windowElements);
             entity->position.x = xmlStruct.x;
             entity->position.y = xmlStruct.y
@@ -209,6 +213,7 @@ GameEntity* GameEntityFactory::createEntity(EntityXmlStruct xmlStruct)
 
         case ENTITY_ENEMYPROJECTILEHIT:
         {
+           
             SpriteRenderComponent* render = new SpriteRenderComponent(entity, windowElements);
             SDL_Rect rect = render->getRenderRect();
             rect.x = xmlStruct.x - xmlStruct.width/2;
@@ -237,13 +242,28 @@ GameEntity* GameEntityFactory::createEntity(EntityXmlStruct xmlStruct)
             break;
         }
 
+        case ENTITY_LIFEITEM: // 목숨 아이템
+        {
+            entity->addRenderComponent(new LifeitemRenderComponent(entity, windowElements));
+            LifeitemPhysicsComponent* physics = new LifeitemPhysicsComponent(entity, windowElements, this);
+            physics->getMovementPattern()->setMovementPattern(MOVEMENT_STRAIGHT);
+        //    entity->setScore(100);
+            physics->addObserver(dynamic_cast<IObserver*>(gameEntityManager->getState()));
+            entity->addPhysicsComponent(physics);
+            entity->addCollisionComponent(new LifeitemCollisionComponent(entity, windowElements, gameEntityManager->getCollisionManager()));
+            entity->position.x = xmlStruct.x;
+            entity->position.y = xmlStruct.y;
+            configureEntity(entity, xmlStruct);
+            gameEntityManager->addPhysicalEntity(entity);
+            break;
+        }
+
         case ENTITY_ENEMYCARRIER:
         {
             entity->addRenderComponent(new EnemyRenderComponent(entity, windowElements));
             EnemyPhysicsComponent* physics = new EnemyPhysicsComponent(entity, windowElements, this);
-            physics->getMovementPattern()->setMovementPattern(MOVEMENT_STRAIGHTSLOW);
-            physics->setMaxHealth(xmlStruct.health);
-            entity->setScore(1500);
+            physics->getMovementPattern()->setMovementPattern(MOVEMENT_STRAIGHT);
+            entity->setScore(1000);
             physics->addObserver(dynamic_cast<IObserver*>(gameEntityManager->getState()));
             entity->addPhysicsComponent(physics);
             entity->addCollisionComponent(new EnemyCollisionComponent(entity, windowElements, gameEntityManager->getCollisionManager()));
@@ -252,14 +272,15 @@ GameEntity* GameEntityFactory::createEntity(EntityXmlStruct xmlStruct)
             configureEntity(entity, xmlStruct);
             gameEntityManager->addPhysicalEntity(entity);
             break;
-        }
 
+        }
+        // level 1으로 사용
         case ENTITY_ENEMYSWOOPLEFT:
         {
             entity->addRenderComponent(new EnemyRenderComponent(entity, windowElements));
             EnemyPhysicsComponent* physics = new EnemyPhysicsComponent(entity, windowElements, this);
             physics->getMovementPattern()->setMovementPattern(MOVEMENT_SWOOPLEFT);
-            entity->setScore(500);
+            entity->setScore(1000);
             physics->addObserver(dynamic_cast<IObserver*>(gameEntityManager->getState()));
             entity->addPhysicsComponent(physics);
             entity->addCollisionComponent(new EnemyCollisionComponent(entity, windowElements, gameEntityManager->getCollisionManager()));
@@ -275,7 +296,7 @@ GameEntity* GameEntityFactory::createEntity(EntityXmlStruct xmlStruct)
             entity->addRenderComponent(new EnemyRenderComponent(entity, windowElements));
             EnemyPhysicsComponent* physics = new EnemyPhysicsComponent(entity, windowElements, this);
             physics->getMovementPattern()->setMovementPattern(MOVEMENT_SWOOPRIGHT);
-            entity->setScore(500);
+            entity->setScore(1000);
             physics->addObserver(dynamic_cast<IObserver*>(gameEntityManager->getState()));
             entity->addPhysicsComponent(physics);
             entity->addCollisionComponent(new EnemyCollisionComponent(entity, windowElements, gameEntityManager->getCollisionManager()));
@@ -289,10 +310,9 @@ GameEntity* GameEntityFactory::createEntity(EntityXmlStruct xmlStruct)
         case ENTITY_ENEMYUFO:
         {
             entity->addRenderComponent(new EnemyRenderComponent(entity, windowElements));
-            //EnemyPhysicsComponent* physics = new EnemyPhysicsComponent(entity, windowElements, this);
-            UFOPhysicsComponent* physics = new UFOPhysicsComponent(entity, windowElements, this);
-            //physics->getMovementPattern()->setMovementPattern(MOVEMENT_STRAIGHT);
-            entity->setScore(200);
+            EnemyPhysicsComponent* physics = new EnemyPhysicsComponent(entity, windowElements, this);
+            physics->getMovementPattern()->setMovementPattern(MOVEMENT_STRAIGHT);
+            entity->setScore(1000);
             physics->addObserver(dynamic_cast<IObserver*>(gameEntityManager->getState()));
             entity->addPhysicsComponent(physics);
             entity->addCollisionComponent(new EnemyCollisionComponent(entity, windowElements, gameEntityManager->getCollisionManager()));
@@ -318,6 +338,7 @@ GameEntity* GameEntityFactory::createEntity(EntityXmlStruct xmlStruct)
             gameEntityManager->addPhysicalEntity(entity);
             break;
         }
+        
 
         case ENTITY_EXPLOSION:
         {
@@ -343,7 +364,7 @@ GameEntity* GameEntityFactory::createEntity(EntityXmlStruct xmlStruct)
             damagedTexture2->setTexture(Util::fix_path("../data/graphics/sprites/playerShip1_damage2.png"));
             render->addDamagedSprite(2, damagedTexture2);
             Texture* damagedTexture3 = new Texture(windowElements);
-            damagedTexture3->setTexture(Util::fix_path("../data/graphics/sprites/playerShip1_damage3.png"));
+            damagedTexture3->setTexture(Util::fix_path(""));
             render->addDamagedSprite(1, damagedTexture3);
             entity->addRenderComponent(render);
             PlayerPhysicsComponent* physics = new PlayerPhysicsComponent(entity, windowElements, this);

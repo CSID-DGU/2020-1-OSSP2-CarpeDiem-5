@@ -24,7 +24,7 @@ UFOPhysicsComponent::UFOPhysicsComponent(GameEntity* gameEntity,
     render(NULL),
     velocity(0,300),
     velocityPerSecond(500),
-    shooting(true)
+    shooting(false)
 {
     this->gameEntity = gameEntity;
     this->windowElements = windowElements;
