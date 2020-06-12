@@ -23,7 +23,7 @@ PlayerRenderComponent::PlayerRenderComponent(GameEntity* gameEntity,
     this->windowElements = windowElements;
 
     texture = new Texture(windowElements);
-    texture->setTexture(Util::fix_path("../data/graphics/sprites/playerShip1_blue.png"));
+    texture->setTexture(Util::fix_path("../data/graphics/sprites/elephant.png"));
 
     gameEntity->position.x = windowElements->WINDOW_WIDTH/2;
     gameEntity->position.y = 0.8*windowElements->WINDOW_HEIGHT;
