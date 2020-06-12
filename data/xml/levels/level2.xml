@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 
 <Level>
-    <settings time="62000" music="level1"/>
+    <settings time="68000" music="level1"/>
 
     <EnemyType>
         <entity type="enemySwoopRight" x="530" y="10" spawn-time="20"/>
