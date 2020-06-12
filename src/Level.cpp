@@ -103,10 +103,10 @@ void Level::parse(int level)
 void Level::onUpdate()
 {
     std::string xmlPath;
-    // ì´ì œ ë³´ìŠ¤ ë ˆë°¸ë„ ë“¤ì–´ì˜¬ ìˆ˜ ìˆìŒ. 
+    // ÀÌÁ¦ º¸½º ·¹¹ëµµ µé¾î¿Ã ¼ö ÀÖÀ½. 
     if (doneLevel)
     {
-        // 4ê¹Œì§€ í—ˆìš©í•´ì„œ ë³´ìŠ¤ì— ëŒ€í•œ ì •ë³´ê¹Œì§€ ê°€ì ¸ì˜´. 
+        // 4±îÁö Çã¿ëÇØ¼­ º¸½º¿¡ ´ëÇÑ Á¤º¸±îÁö °¡Á®¿È.  
         if (currentLevel < LEVEL_XML_PATH_SIZE)
         {
             timer.stop();
@@ -115,8 +115,8 @@ void Level::onUpdate()
             notify(NULL, LEVEL_COMPLETED);
             timer.start();
         }
-        // currentLevel ì´ LEVEL_XML_PATH_SIZEì¸ ê²½ìš°
-        // ë³´ìŠ¤ë ˆë²¨ì„ doneí•œê²ƒì´ê¸° ë•Œë¬¸ì— ê²Œì„ ì™„ë£Œí•´ì¤Œ. 
+        // currentLevel ÀÌ LEVEL_XML_PATH_SIZEÀÎ °æ¿ì
+        // º¸½º·¹º§À» doneÇÑ°ÍÀÌ±â ¶§¹®¿¡ °ÔÀÓ ¿Ï·áÇØÁÜ. 
         else
         {
             timer.stop();
@@ -142,10 +142,9 @@ void Level::onUpdate()
             nextSpawnTime = levelFinishTime+1000;
         }
     }
-
-   // if (!bossLevel && timer.getTimeOnTimer() > levelFinishTime)
-   // ì—¬ê¸°ì„œ ë³´ìŠ¤ ë ˆë²¨ì€ doneLevelë¡œ ë°”ë€Œì§€ ì•Šì•„ ìœ„ì—ì„œ ê²Œì„ ì¢…ë£Œê°€ ë˜ì§€ì•ŠìŒ. 
-   // !bossLevel ì¡°ê±´ì„ ì§€ì›€ 
+    // if (!bossLevel && timer.getTimeOnTimer() > levelFinishTime)
+    // ¿©±â¼­ º¸½º ·¹º§Àº doneLevel·Î ¹Ù²îÁö ¾Ê¾Æ À§¿¡¼­ °ÔÀÓ Á¾·á°¡ µÇÁö¾ÊÀ½. 
+    // !bossLevel Á¶°ÇÀ» Áö¿ò   
     if (timer.getTimeOnTimer() > levelFinishTime)
     {
         doneLevel = true;
