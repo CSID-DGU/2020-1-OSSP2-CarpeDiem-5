@@ -219,11 +219,8 @@ void GameState::onNotify(GameEntity* entity, int event)
             //printf("LIVES = %d\n", lives);
             break;
         case LIFEITEM_DESTROYED: // 목숨 아이템이 사라짐
-            //    playerDestroyed = false;
-            if(lives<5)
-            {
-                lives++;
-            }           
+            if(lives<6) lives+=1;
+            if(lives<6) lives+=1;             
             break;
     }
 }
