@@ -221,7 +221,8 @@ void GameState::onNotify(GameEntity* entity, int event)
             break;
         case LIFEITEM_DESTROYED: // ��� �������� �����
             if(lives<6) lives+=1;
-            if(lives<6) lives+=1;             
+            if(lives<6) lives+=1;  
+            score+=300;           
             break;
     }
 }
