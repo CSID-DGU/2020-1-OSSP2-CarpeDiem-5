@@ -204,6 +204,7 @@ void GameState::onNotify(GameEntity* entity, int event)
             break;
 
         case GAME_OVER:
+            printf("SCORE = %d\n", score);
             gameOverTimer.start();
             break;
 
@@ -214,13 +215,14 @@ void GameState::onNotify(GameEntity* entity, int event)
             break;
 
         case PLAYER_DESTROYED:
-            lives--;
+            lives--; score-=300;
             playerDestroyed = true;
             //printf("LIVES = %d\n", lives);
             break;
-        case LIFEITEM_DESTROYED: // ¸ñ¼û ¾ÆÀÌÅÛÀÌ »ç¶óÁü
+        case LIFEITEM_DESTROYED: // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
             if(lives<6) lives+=1;
-            if(lives<6) lives+=1;             
+            if(lives<6) lives+=1;  
+            score+=300;           
             break;
     }
 }
