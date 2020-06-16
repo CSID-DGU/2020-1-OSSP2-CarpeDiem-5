@@ -33,7 +33,7 @@
     </Physical>
 
     <Ui>
-        <entity type="uiLives" name="uiLives" x="20" y="20" width="33" height="26" texture="../data/graphics/ui/playerLife-ele.png" id="uiLives" />
+        <entity type="uiLives" name="uiLives" x="20" y="20" width="50" height="26" texture="../data/graphics/ui/playerLife-ele.png" id="uiLives" />
         <entity type="uiScore" name="uiScore" x="806" y="20" width="198" height="26" id="uiScore" />
     </Ui>
 </State>
