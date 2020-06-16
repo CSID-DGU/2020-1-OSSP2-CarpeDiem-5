@@ -30,25 +30,25 @@ UILivesRenderComponent::UILivesRenderComponent(GameEntity* gameEntity,
     xTexture->setTexture(Util::fix_path("../data/graphics/ui/numeralX.png"));
 
     numLivesTextures[0] = new Texture(windowElements);
-    numLivesTextures[0]->setTexture(Util::fix_path("../data/graphics/ui/numeral0.png"));
-
+    numLivesTextures[0]->setTexture(Util::fix_path("../data/graphics/ui/live0.png"));
+    
     numLivesTextures[1] = new Texture(windowElements);
-    numLivesTextures[1]->setTexture(Util::fix_path("../data/graphics/ui/numeral1.png"));
+    numLivesTextures[1]->setTexture(Util::fix_path("../data/graphics/ui/live1.png"));
 
     numLivesTextures[2] = new Texture(windowElements);
-    numLivesTextures[2]->setTexture(Util::fix_path("../data/graphics/ui/numeral2.png"));
+    numLivesTextures[2]->setTexture(Util::fix_path("../data/graphics/ui/live2.png"));
 
     numLivesTextures[3] = new Texture(windowElements);
-    numLivesTextures[3]->setTexture(Util::fix_path("../data/graphics/ui/numeral3.png"));
+    numLivesTextures[3]->setTexture(Util::fix_path("../data/graphics/ui/live3.png"));
 
     numLivesTextures[4] = new Texture(windowElements);
-    numLivesTextures[4]->setTexture(Util::fix_path("../data/graphics/ui/numeral4.png"));
+    numLivesTextures[4]->setTexture(Util::fix_path("../data/graphics/ui/live4.png"));
 
     numLivesTextures[5] = new Texture(windowElements);
-    numLivesTextures[5]->setTexture(Util::fix_path("../data/graphics/ui/numeral5.png"));
+    numLivesTextures[5]->setTexture(Util::fix_path("../data/graphics/ui/live5.png"));
 
     numLivesTextures[6] = new Texture(windowElements);
-    numLivesTextures[6]->setTexture(Util::fix_path("../data/graphics/ui/numeral6.png"));
+    numLivesTextures[6]->setTexture(Util::fix_path("../data/graphics/ui/live6.png"));
 
     renderRect.x = 20;
     renderRect.y = 20;
@@ -59,7 +59,7 @@ UILivesRenderComponent::UILivesRenderComponent(GameEntity* gameEntity,
 
 void UILivesRenderComponent::update()
 {
-    xRect.x = renderRect.x + 1.2*renderRect.w;
+    xRect.x = renderRect.x + 1.3*renderRect.w;
     xRect.y = renderRect.y + 0.2*renderRect.h;
     xRect.w = renderRect.w - 0.4*renderRect.h;
     xRect.h = renderRect.h - 0.4*renderRect.h;
