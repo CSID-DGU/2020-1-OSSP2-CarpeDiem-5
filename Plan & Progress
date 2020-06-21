@@ -1,0 +1,73 @@
+
+1. 목숨 아이템 생성 (100%)
+- 총알에 맞았을 때 목숨 증가 (완성)
+- 코끼리에 닿았을 때 목숨 증가 
+
+2. 레벨 추가 및 레벨업 창 보여주기 (100%)
+- 각 레벨의 xml파일에 레벨 이미지 추가
+
+3. 이미지 변경 (100%)
+- 공격 주체 : 우주선 -> 코끼리
+- 공격 대상 : 우주선 -> 봉지 / 빨대
+- 공격 수단 : 레이저 -> 물방울 
+
+4. 장애물 떨어지는 속도 & 장애물 나타나는 속도 줄이기 (100%)
+- xml파일에서 장애물 생성 속도를 조절
+- 난이도에 맞에 생성 횟수 증가
+
+5. 게인 종료 조건 (100%)
+- 공격 3번에 목숨 -1 -> 공격 1번에 목숨 -1
+
+6. 이동 방향 (100%)
+- 상하좌우 -> 좌우( 코끼리가 화면 밖으로 나가지 못하도록 함.)
+
+7. victory 오류 (100%)
+- 게임 완료시 victory화면이 나오도록 수정
+5/6 소스코드 추가
+
+
+<세부 진행 과정>
+5/14 오픈소스 변경
+- 오픈소스 링크: https://github.com/brandonto/sdl-space-shooter
+
+라이선스: MIT 라이선스 
+
+5/15 깃헙 관리
+
+5/23 코드 변경
+- 레벨업 창 뜨는 xml, 레벨별 xml, 목숨 아이템 xml 추가
+- 이미지 변경
+- 장애물 낙하 속도 변경 (사실은 속도가 아니라, 등장 빈도 조절)
+- 레벨업 창 gui 코드 추가.
+- 목숨 아이템에 사용될 cpp와 헤더파일 수정 중.
+
+6/9 
+- 레벨업 이미지 추가
+- 장애물 낙하 빈도 조정
+- 목숨 아이템 추가 -현재까지는 총알에 닿았을 때만 목숨 증가 (최대 5까지 증가)
+- 새로 생성한 파일:
+LifeitemCollisionComponent.h
+LifeitemPhysicsComponent.h
+LifeitemRenderComponent.h
+LifeitemCollisionComponent.cpp
+LifeitemPhysicsComponent.cpp
+LifeitemRenderComponent.cpp
+
+- 변경한 파일:
+[xml 파일]
+GameState.xml
+level1.xml
+level2.xml
+level3.xml
+level4.xml
+boss.xml
+
+[.h/ .cpp 파일]
+GameEntityFactory.cpp
+GameEntityFactory.h
+GameState.cpp
+GameState.h
+UILivesRenderComponent.cpp
+
+[Makefile]
+- 새로 생성한 파일에 대한 .o 코드 추가
