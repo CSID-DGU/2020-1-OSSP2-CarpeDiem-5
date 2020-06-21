@@ -5,36 +5,29 @@ OSSP project group
 Open Source
 =================
 
-Link : https://github.com/brandonto/sdl-space-shooter.git
+Link : https://github.com/brandonto/sdl-space-shooter.git <br/>
 License : MIT License
-
-
-Music
-=================
-
-사용 음악 (라이센스 표시는 license파일에 명시)
-
-- Menu State: menu.ogg
-- Game State: level1.ogg
-- Boss Fight: boss.ogg
-- Victory State: win.ogg
-- Game Over State: lose.ogg
-
-Assets are courtesy of Kenney, who can be found here: http://kenney.nl/
 
 
 Screetshots
 =================
+Main 
 <div>
 <img width="500" src="https://user-images.githubusercontent.com/59468208/85220193-901daa00-b3e4-11ea-84d1-50b0a3ccd75e.png">
-<img width="500 src="https://user-images.githubusercontent.com/59468208/85220404-1b4b6f80-b3e6-11ea-87dc-5beb729bdfdc.png">
-                                                                                                                          
 </div>
-Main 화면 
+Instruction  
+<div>
+<img width="500" src="https://user-images.githubusercontent.com/59468208/85220404-1b4b6f80-b3e6-11ea-87dc-5beb729bdfdc.png">
+</div>
+Game Screen 
+<div>                                                                                                                        
+<img width="500" src="https://user-images.githubusercontent.com/59468208/85220646-39b26a80-b3e8-11ea-9807-8cb425ee010d.png">             </div>  
+ Victory                                                                                                                        
+<div>                                                                                                                        
+<img width="500" src="https://user-images.githubusercontent.com/59468208/85220474-b80e0d00-b3e6-11ea-9726-5d43faa8e300.png">             </div>  
 
-![Game]()
 
-![Victory]()
+
 
 Language
 =================
