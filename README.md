@@ -21,7 +21,7 @@ Instruction
 </div>
 Game Screen 
 <div>                                                                                                                        
-<img width="500" src="https://user-images.githubusercontent.com/59468208/85220646-39b26a80-b3e8-11ea-9807-8cb425ee010d.png">             </div>  
+<img width="500" src="https://user-images.githubusercontent.com/59468208/85220743-2227b180-b3e9-11ea-8b22-88bc514ab788.png">             </div>  
  Victory                                                                                                                        
 <div>                                                                                                                        
 <img width="500" src="https://user-images.githubusercontent.com/59468208/85220474-b80e0d00-b3e6-11ea-9726-5d43faa8e300.png">             </div>  
