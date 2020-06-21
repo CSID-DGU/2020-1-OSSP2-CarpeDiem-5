@@ -31,7 +31,7 @@ Main
 </div>
 Instruction
 <div>
-<img width="500 src="https://user-images.githubusercontent.com/59468208/85220404-1b4b6f80-b3e6-11ea-87dc-5beb729bdfdc.png">
+<img width="500" src="https://user-images.githubusercontent.com/59468208/85220404-1b4b6f80-b3e6-11ea-87dc-5beb729bdfdc.png">
 </div>
  Victory                                                                                                                        
 <div>                                                                                                                        
