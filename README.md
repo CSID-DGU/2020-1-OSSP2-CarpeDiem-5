@@ -17,18 +17,18 @@ A-KO Shooting game
 
 Screetshots
 =================
-##Main 
+Main 
 <div>
 <img width="500" src="https://user-images.githubusercontent.com/59468208/85220193-901daa00-b3e4-11ea-84d1-50b0a3ccd75e.png">
 </div>
-##Instruction  
+Instruction  
 <div>
 <img width="500" src="https://user-images.githubusercontent.com/59468208/85220404-1b4b6f80-b3e6-11ea-87dc-5beb729bdfdc.png">
 </div>
-##Game Screen 
+Game Screen 
 <div>                                                                                                                        
 <img width="500" src="https://user-images.githubusercontent.com/59468208/85220743-2227b180-b3e9-11ea-8b22-88bc514ab788.png">             </div>  
-## Victory                                                                                                                        
+Victory                                                                                                                        
 <div>                                                                                                                        
 <img width="500" src="https://user-images.githubusercontent.com/59468208/85220474-b80e0d00-b3e6-11ea-9726-5d43faa8e300.png">             </div>  
 
@@ -63,7 +63,7 @@ Linux에서 실행 방법
 =================
 
 [1] Libraries 설치 (Run the following commands on bash:)
-
+"'
 - sudo apt-get update
 
 - apt-cache search libsdl2
@@ -74,11 +74,11 @@ Linux에서 실행 방법
 
 - sudo apt-get install libsdl2-ttf-dev
 
-- sudo apt-get install libsdl2-mixer-dev
+- sudo apt-get install libsdl2-mixer-dev "'
 
 [2] 게임 실행 ( Navigate to the directory where you want the project to be cloned
    and run the following commands: )
-
+"'
 - git clone https://github.com/CSID-DGU/2020-1-OSSP2-CarpeDiem-5.git
 
 - make all
@@ -86,7 +86,7 @@ Linux에서 실행 방법
 - cd bin
 
 - ./SpaceShooter
-
+"'
 
 Developers
 =================
