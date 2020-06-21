@@ -25,11 +25,17 @@ Assets are courtesy of Kenney, who can be found here: http://kenney.nl/
 
 Screetshots
 =================
+Main 
 <div>
 <img width="500" src="https://user-images.githubusercontent.com/59468208/85220193-901daa00-b3e4-11ea-84d1-50b0a3ccd75e.png">
-<img width="500 src="https://user-images.githubusercontent.com/59468208/85220404-1b4b6f80-b3e6-11ea-87dc-5beb729bdfdc.png">
-                                                                                                                          
 </div>
+Instruction
+<div>
+<img width="500 src="https://user-images.githubusercontent.com/59468208/85220404-1b4b6f80-b3e6-11ea-87dc-5beb729bdfdc.png">
+</div>
+ Victory                                                                                                                        
+<div>                                                                                                                        
+<img width="500" src="https://user-images.githubusercontent.com/59468208/85220474-b80e0d00-b3e6-11ea-9726-5d43faa8e300.png">              </div>                                                                                                                                                                                                                                                     
 Main 화면 
 
 ![Game]()
