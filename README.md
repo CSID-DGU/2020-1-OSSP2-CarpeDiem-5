@@ -63,7 +63,7 @@ Linux에서 실행 방법
 =================
 
 [1] Libraries 설치 (Run the following commands on bash:)
-"'
+
 - sudo apt-get update
 
 - apt-cache search libsdl2
@@ -74,11 +74,11 @@ Linux에서 실행 방법
 
 - sudo apt-get install libsdl2-ttf-dev
 
-- sudo apt-get install libsdl2-mixer-dev "'
+- sudo apt-get install libsdl2-mixer-dev 
 
 [2] 게임 실행 ( Navigate to the directory where you want the project to be cloned
    and run the following commands: )
-"'
+
 - git clone https://github.com/CSID-DGU/2020-1-OSSP2-CarpeDiem-5.git
 
 - make all
@@ -86,7 +86,7 @@ Linux에서 실행 방법
 - cd bin
 
 - ./SpaceShooter
-"'
+
 
 Developers
 =================
